@@ -46,6 +46,17 @@
 
 
 
+		conektaErrorResponseHandler = function(response) {
+		  var $form;
+		  $form = $("#card-form");
+
+		  
+		/* Muestra los errores en la forma */
+
+		  $form.find(".card-errors").text(response.message);
+		  $form.find("button").prop("disabled", false);
+		};
+
 
 
 		});
